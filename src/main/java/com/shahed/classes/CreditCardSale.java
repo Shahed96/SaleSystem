@@ -5,7 +5,6 @@
  */
 package com.shahed.classes;
 
-
 public class CreditCardSale extends Sale {
 
     private String nameOnCard;
@@ -50,23 +49,27 @@ public class CreditCardSale extends Sale {
         }
 
     }
-    
-    public String getNameOnCard(){
-    return nameOnCard;
+
+    public String getNameOnCard() {
+        return nameOnCard;
     }
-    
-     public Date getExpiredDate(){
-    return new Date (expiredDate);
+
+    public Date getExpiredDate() {
+        return new Date(expiredDate);
     }
-     
-      public String getCreditCardNumber(){
-    return creditCardNumber;
+
+    public String getCreditCardNumber() {
+        return creditCardNumber;
     }
 
     @Override
     public void saleDetails() {
         System.out.println("The sale amount is " + getAmount() + " \n" + "The payment method: credit card" + "\n" + "Name on card: "
-        +getNameOnCard()+"\n"+"Expired date: "+getExpiredDate()+"\n"+"Credit card number: "+getCreditCardNumber());
+                + getNameOnCard() + "\n" + "Expired date: " + getExpiredDate() + "\n" + "Credit card number: " + getCreditCardNumber());
+    }
+
+    public void saleDetailsSuper() {
+        super.saleDetails();
     }
 
 }
